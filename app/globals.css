@@ -2,25 +2,219 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a1317;
+  --irex-ink: #0a1317;
+  --irex-text-soft: #1c2b33;
+  --irex-text-subtle: #40525c;
+  --irex-muted: #64717c;
+  --irex-accent: #0064e0;
+  --irex-accent-strong: #0143b5;
+  --irex-accent-soft: #eaf2ff;
+  --irex-gold: #ffd84d;
+  --irex-surface: #f5f6f7;
+  --irex-border: #edf0f2;
+  --irex-success: #168a45;
+  --irex-danger: #c62828;
+  --irex-input-border: #dadde1;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), Montserrat, Helvetica, Arial, sans-serif;
+}
+
+::selection {
+  background: #dbeafe;
+  color: var(--irex-ink);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--irex-accent);
+  outline-offset: 2px;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+.irex-container {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+
+.irex-section {
+  padding-block: 76px;
+}
+
+.irex-eyebrow {
+  color: var(--irex-accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.irex-section-title {
+  color: var(--irex-ink);
+  font-size: clamp(2rem, 3vw, 2.625rem);
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.irex-section-body {
+  color: var(--irex-muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.irex-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 7px 13px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.irex-badge--blue {
+  background: var(--irex-accent-soft);
+  color: var(--irex-accent);
+}
+
+.irex-badge--gold {
+  background: var(--irex-gold);
+  color: var(--irex-ink);
+}
+
+.irex-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.irex-button--primary {
+  background: var(--irex-accent);
+  color: #fff;
+}
+
+.irex-button--primary:hover {
+  background: var(--irex-accent-strong);
+}
+
+.irex-button--secondary {
+  border: 2px solid var(--irex-ink);
+  color: var(--irex-ink);
+  background: transparent;
+}
+
+.irex-button--secondary:hover {
+  background: rgba(10, 19, 23, 0.04);
+}
+
+.irex-button--dark-secondary {
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  color: #fff;
+  background: transparent;
+}
+
+.irex-button--dark-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.irex-button--whatsapp {
+  background: var(--irex-success);
+  color: #fff;
+}
+
+.irex-button--whatsapp:hover {
+  background: #12753a;
+}
+
+.irex-form-label {
+  color: var(--irex-text-soft);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.irex-input {
+  width: 100%;
+  min-height: 46px;
+  border-radius: 8px;
+  border: 1px solid var(--irex-input-border);
+  background: #fff;
+  padding-inline: 14px;
+  color: var(--irex-ink);
+  font-size: 15px;
+}
+
+.irex-input:focus {
+  border-color: var(--irex-accent);
+  box-shadow: 0 0 0 3px rgba(0, 100, 224, 0.12);
+}
+
+.irex-input--error {
+  border-color: var(--irex-danger);
+}
+
+.irex-field-error {
+  color: var(--irex-danger);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 1023px) {
+  .irex-container {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .irex-container {
+    padding-inline: 20px;
+  }
+
+  .irex-section {
+    padding-block: 64px;
+  }
 }

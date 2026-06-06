@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Project Governance
+
+This repository is the main IREX web presence. Development rules live in
+`.specify/memory/constitution.md` and `AGENTS.md`: follow OWASP, SOLID, the
+official design system in `docs/designer-system.md`, and the local Next.js docs
+under `node_modules/next/dist/docs/` before changing App Router APIs or
+conventions.
+
 ## Getting Started
 
 First, run the development server:
