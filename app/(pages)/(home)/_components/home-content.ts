@@ -178,15 +178,15 @@ export const homePageContent = {
         icon: "LayoutDashboard",
       },
       {
-        title: "React e Next.js",
+        title: "Interfaces modernas e responsivas",
         description:
-          "Frontend moderno com Next.js, React e TypeScript, migrações, interfaces responsivas e integração com APIs.",
+          "Sites, dashboards e aplicações web com design system, performance e experiência focadas em conversão de clientes.",
         icon: "Code2",
       },
       {
-        title: "Backend e APIs",
+        title: "Infraestrutura e APIs",
         description:
-          "APIs REST, NestJS, autenticação, permissões, upload de arquivos, microsserviços e bancos de dados.",
+          "APIs seguras, autenticação, integrações entre sistemas, bancos de dados e backend escalável preparado para crescer.",
         icon: "ServerCog",
       },
       {
