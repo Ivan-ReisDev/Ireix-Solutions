@@ -13,12 +13,12 @@ import { motion } from "framer-motion";
 import {
   homePageContent,
   type BlogCard,
-} from "@/app/(pages)/(home)/_components/home-content";
+} from "./home-content";
 import {
   StaggerContainer,
   StaggerItem,
-} from "@/app/(pages)/(home)/_components/shared/stagger-container";
-import { FadeInView } from "@/app/(pages)/(home)/_components/shared/fade-in-view";
+} from "./shared/stagger-container";
+import { FadeInView } from "./shared/fade-in-view";
 
 const iconMap: Record<BlogCard["icon"], LucideIcon> = {
   SearchCheck,

@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import {
   hasConfiguredWhatsApp,
   homePageContent,
-} from "@/app/(pages)/(home)/_components/home-content";
+} from "./home-content";
 
 export function TopNavigation() {
   const [isOpen, setIsOpen] = useState(false);

@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { homePageContent } from "@/app/(pages)/(home)/_components/home-content";
+import { homePageContent } from "./home-content";
 import {
   heroStaggerVariants,
   heroChildVariants,
   useAccessibleVariants,
-} from "@/app/(pages)/(home)/_components/shared/animation-config";
+} from "./shared/animation-config";
 
 export function HeroSection() {
   const { hero } = homePageContent;

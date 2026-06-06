@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import {
   hasConfiguredWhatsApp,
   homePageContent,
-} from "@/app/(pages)/(home)/_components/home-content";
-import { ContactForm } from "@/app/(pages)/(home)/_components/ContactForm";
-import { FadeInView } from "@/app/(pages)/(home)/_components/shared/fade-in-view";
+} from "./home-content";
+import { ContactForm } from "./ContactForm";
+import { FadeInView } from "./shared/fade-in-view";
 
 export function ContactSection() {
   const { contact } = homePageContent;

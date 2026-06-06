@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 
-import { homePageContent } from "@/app/(pages)/(home)/_components/home-content";
-import { FadeInView } from "@/app/(pages)/(home)/_components/shared/fade-in-view";
+import { homePageContent } from "./home-content";
+import { FadeInView } from "./shared/fade-in-view";
 import {
   slideLeftVariants,
   slideRightVariants,
   useAccessibleVariants,
-} from "@/app/(pages)/(home)/_components/shared/animation-config";
+} from "./shared/animation-config";
 
 export function ProcessSection() {
   const { process } = homePageContent;

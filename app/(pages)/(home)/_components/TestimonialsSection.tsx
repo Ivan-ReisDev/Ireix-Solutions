@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { homePageContent } from "@/app/(pages)/(home)/_components/home-content";
+import { homePageContent } from "./home-content";
 import {
   StaggerContainer,
   StaggerItem,
-} from "@/app/(pages)/(home)/_components/shared/stagger-container";
-import { FadeInView } from "@/app/(pages)/(home)/_components/shared/fade-in-view";
+} from "./shared/stagger-container";
+import { FadeInView } from "./shared/fade-in-view";
 
 export function TestimonialsSection() {
   const { testimonials } = homePageContent;
